@@ -1,0 +1,327 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sel",
+				"selectedSlot"
+			],
+			[
+				"sele",
+				"selectIndicator"
+			],
+			[
+				"selec",
+				"selectedSlot"
+			],
+			[
+				"select",
+				"selectMoveTimer"
+			],
+			[
+				"Vecto",
+				"Vector2"
+			],
+			[
+				"toggl",
+				"toggleScreen"
+			],
+			[
+				"lef",
+				"leftShoulder"
+			],
+			[
+				"dis",
+				"dispatchEvent"
+			],
+			[
+				"input",
+				"inputDispatchers"
+			],
+			[
+				"new",
+				"newDispatcher"
+			],
+			[
+				"in",
+				"inputDispatchers"
+			],
+			[
+				"eq",
+				"equipmentScreen"
+			],
+			[
+				"model",
+				"modelCache"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"com",
+				"component"
+			],
+			[
+				"move",
+				"movement"
+			],
+			[
+				"liste",
+				"listeners"
+			],
+			[
+				"Vec",
+				"Vec3"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fire",
+				"fireDirection"
+			],
+			[
+				"update",
+				"updatedValues"
+			],
+			[
+				"game",
+				"gamepadIndex"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"Objec",
+				"Object3D"
+			],
+			[
+				"rotation",
+				"rotationOffset"
+			],
+			[
+				"ac",
+				"activeTransition"
+			],
+			[
+				"interv",
+				"intervalButton"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"bot_",
+				"bot_template"
+			],
+			[
+				"bot",
+				"bot_template"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/objelisks/code/shotgame/game/system/THREEx.EventDispatcher.js",
+		"/home/objelisks/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/objelisks/code/shotgame/game/helpers/loader.js",
+		"/home/objelisks/code/shotgame/world.json",
+		"/home/objelisks/code/shotgame/worldgen.js",
+		"/home/objelisks/code/shotgame/index.html",
+		"/home/objelisks/code/shotgame/game/things/player.js",
+		"/home/objelisks/code/shotgame/game/things/block.js",
+		"/home/objelisks/code/shotgame/models/do_the_thing_with_the_models.js",
+		"/home/objelisks/code/shotgame/models/compile_meshes.js",
+		"/home/objelisks/code/shotgame/models/green_block.json",
+		"/home/objelisks/code/shotgame/models/tree.json",
+		"/home/objelisks/code/shotgame/game/things/bullet.js",
+		"/home/objelisks/code/shotgame/game/things/gun.js",
+		"/home/objelisks/code/shotgame/game/helpers/camera.js",
+		"/home/objelisks/code/shotgame/game/helpers/component.js",
+		"/home/objelisks/code/shotgame/game/system/level.js",
+		"/home/objelisks/code/shotgame/game/system/input.js",
+		"/home/objelisks/code/shotgame/game/helpers/collisionGroups.js",
+		"/home/objelisks/code/shotgame/models/tree.mtl",
+		"/home/objelisks/code/shotgame/models/tree.obj",
+		"/home/objelisks/code/shotgame/models/bullet.json",
+		"/home/objelisks/code/shotgame/models/bullet.mtl",
+		"/home/objelisks/code/lib/mrdoob-three.js-1769fbf/utils/converters/obj/bullet.json",
+		"/home/objelisks/code/shotgame/game/helpers/events.js",
+		"/home/objelisks/code/shotgame/game/system/terrainman.js",
+		"/home/objelisks/code/shotgame/game/system/state.js",
+		"/home/objelisks/code/shotgame/game/util/pool.js",
+		"/home/objelisks/Downloads/psxe/docs/epsxe_linux_en.txt",
+		"/home/objelisks/code/shotgame/game/system/single.js",
+		"/home/objelisks/code/shotgame/game/actors/player.js",
+		"/home/objelisks/code/shotgame/game/actors/gun.js",
+		"/home/objelisks/.config/sublime-text-2/Packages/User/define.sublime-snippet",
+		"/home/objelisks/code/shotgame/README.md",
+		"/home/objelisks/code/shotgame/main.js",
+		"/home/objelisks/code/obelisks/views/homepage.html",
+		"/home/objelisks/code/obelisks/databases/webcounter.cache",
+		"/home/objelisks/code/obelisks/views/_layout.html",
+		"/home/objelisks/code/obelisks/readme.md",
+		"/home/objelisks/code/obelisks/index.html",
+		"/home/objelisks/code/botpunk/bots.json",
+		"/home/objelisks/code/botpunk/main.js",
+		"/home/objelisks/code/botpunk/package.json",
+		"/home/objelisks/code/botpunk/styles.css",
+		"/home/objelisks/code/botpunk/index.html",
+		"/home/objelisks/code/everypunk/dict.txt",
+		"/home/objelisks/code/botpunk/d3/d3.js",
+		"/home/objelisks/lib/node-webkit/credits.html",
+		"/home/objelisks/Downloads/nw-sample-apps-master/webgl/index.html",
+		"/home/objelisks/code/botpunk/bot.html",
+		"/home/objelisks/code/botpunk/html-imports.js",
+		"/home/objelisks/code/botpunk/bot.hmtl",
+		"/home/objelisks/code/botpunk/README.md"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"localToWorld",
+			"});",
+			"dead",
+			"set",
+			"dead",
+			"increase"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 197.0,
+	"status_bar_visible": true
+}

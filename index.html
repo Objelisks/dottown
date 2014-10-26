@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>tilde.town/~objelisks</title>
+        <style>body { margin: 0px; } canvas { width: 100%; height: 100%; }</style>
+    </head>
+<body>
+<script type="text/javascript" src="three.js"></script>
+<script src="fonts/droid_sans_regular.typeface.js"></script>
+<script>
+
+/* ,_____
+  / \    \
+ /   \    \ 
+/     \____\
+|     /     \
+|    /       \
+|   /         \
+|   |         |
+ \  |         |
+  \ |         |
+   \|_________|
+
+*/
+
+var scene = new THREE.Scene();
+var width = window.innerWidth;
+var height = window.innerHeight;
+var aspectRatio = width / height;
+//var camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000 );
+var camera = new THREE.OrthographicCamera( -10 * aspectRatio, 10 * aspectRatio, 10, -10, 0.1, 1000 );
+scene.add(camera);
+
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize( width, height );
+document.body.appendChild( renderer.domElement );
+
+var geometry = new THREE.BoxGeometry(1,1,1);
+var material = new THREE.MeshLambertMaterial( { color: 0x1234aa } );
+var cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
+
+var light = new THREE.DirectionalLight(0xffffff, 1.0);
+light.position.set(0.5, 1.5, 1);
+scene.add(light);
+
+camera.position.set(15, 15, 15);
+camera.lookAt(cube.position);
+cube.position.x += 1;
+
+geometry = new THREE.PlaneBufferGeometry(100, 100);
+material = new THREE.MeshLambertMaterial( { color: 0x22aa33 } );
+var ground = new THREE.Mesh( geometry, material );
+ground.rotation.x = -Math.PI/2;
+ground.position.y = -1;
+scene.add( ground );
+
+geometry = new THREE.TextGeometry('~townMMO', {font: 'droid sans', size: 2, height: 0});
+material = new THREE.MeshLambertMaterial( { color: 0xbbbbbb } );
+var title = new THREE.Mesh(geometry, material);
+title.rotation.z = Math.PI/2;
+title.rotation.x = -Math.PI/2;
+title.position.y = -0.9;
+title.position.x = -12;
+title.position.z = 10;
+scene.add(title);
+
+geometry = new THREE.PlaneBufferGeometry(10, 10);
+material = new THREE.MeshLambertMaterial( { color: 0xaa4321 } );
+var questingArea = new THREE.Mesh( geometry, material );
+questingArea.rotation.x = -Math.PI/2;
+questingArea.position.y = -0.9;
+questingArea.position.x = 10;
+questingArea.position.z = -10;
+scene.add( questingArea );
+geometry = new THREE.TextGeometry('Questing Area', {font: 'droid sans', size: 1, height: 0});
+var questingText = new THREE.Mesh(geometry, material);
+questingText.rotation.z = Math.PI/2;
+questingText.position.x = -5.5;
+questingText.position.y = -5;
+questingArea.add(questingText);
+
+geometry = new THREE.PlaneBufferGeometry(10, 10);
+material = new THREE.MeshLambertMaterial( { color: 0x127593 } );
+var marketArea = new THREE.Mesh( geometry, material );
+marketArea.rotation.x = -Math.PI/2;
+marketArea.position.y = -0.9;
+marketArea.position.x = 5;
+marketArea.position.z = 12;
+scene.add( marketArea );
+geometry = new THREE.TextGeometry('Market Area', {font: 'droid sans', size: 1, height: 0});
+var marketText = new THREE.Mesh(geometry, material);
+marketText.rotation.z = Math.PI/2;
+marketText.position.x = -5.5;
+marketText.position.y = -5;
+marketArea.add(marketText);
+
+var moveTarget = cube.position.clone();
+var moveActive = false;
+var moveSpeed = 3.0;
+
+document.body.addEventListener('click', function(e) {
+    var coords = new THREE.Vector2(e.clientX, e.clientY);
+    var raycaster = new THREE.Raycaster();
+    var vector = new THREE.Vector3();
+    var dir = new THREE.Vector3();
+
+    vector.set( ( e.clientX / width ) * 2 - 1, - ( e.clientY / height ) * 2 + 1, - 1 );
+    vector.unproject( camera );
+    dir.set( 0, 0, - 1 ).transformDirection( camera.matrixWorld );
+    raycaster.ray.set( vector, dir );
+
+    var collisions = raycaster.intersectObject(ground, true);
+    if(collisions && collisions.length > 0) {
+        var collision = collisions[0];
+        moveTarget.set(collision.point.x, 0, collision.point.z);
+        moveActive = true;
+    }
+});
+
+var clock = new THREE.Clock(true);
+function render() {
+    requestAnimationFrame(render);
+    renderer.render(scene, camera);
+
+    var delta = clock.getDelta();
+
+    if(moveActive) {
+        var difference = moveTarget.clone().sub(cube.position);
+        var diffLen = difference.length();
+        if(diffLen < 0.3) {
+            moveActive = false;
+        } else {
+            var moveDirection = difference.normalize().multiplyScalar(delta * moveSpeed);
+            if(moveDirection.length() < diffLen) {
+                cube.position.add(moveDirection);
+            }
+        }
+    }
+}
+render();
+
+</script>
+</body>
+</html>
